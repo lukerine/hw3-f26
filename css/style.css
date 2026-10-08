@@ -38,7 +38,7 @@ nav a:hover, nav a:focus {
 /*Write selector/rule property to add the background image to the first div in the grid and place it in the grid. */
 
 .container > div:first-child{
-  grid-column: 1 / span 5;
+  grid-column: 1 / -1;
   background-image: url("/images/header.jpg");
   background-repeat: no-repeat;
 }
@@ -109,17 +109,45 @@ nav a:hover, nav a:focus {
 }
 
 /* Add your media query here */
+@media (min-width: 825px){
 
+  /* Step 10: Write the selector/rule property to style the nav element 
 
-  /* Step 10: Write the selector/rule property to style the nav element */
+  Move the navigation so that the nav is aligned to the other side of the window and has a padding of 35px on the top and bottom and 0 on the left and right */
 
+  nav{
+    text-align: right;
+    padding: 35px 0 35px 0;
+  }
  
   /* Step 11: Write the selector/rule property to update the .container class */
 
-
+.container{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
   /* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
 
+.accounts, .security, .contact {
+  grid-column: 4 / span 3;
+}
 
+.onlinebanking, .loans {
+  grid-column: 2 / span 3;
+}
+
+.accounts-image, .security-image, .contact-image {
+  grid-column: 1 / span 5;
+}
+
+.onlinebanking-image, .loans-image {
+  grid-column: 3 / span 5;
+}
 
  /* Step 16:Write the selector/rule property to update the .text-block class */
 
+.text-block{
+  max-height: 235px;
+  overflow: auto;
+}
+}
