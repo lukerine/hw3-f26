@@ -39,10 +39,15 @@ nav a:hover, nav a:focus {
 
 .container > div:first-child{
   grid-column: 1 / -1;
-  background-image: url("images/header.jpg");
+  background-image: url("../images/header.jpg");
   background-repeat: no-repeat;
 }
 
+.container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* Steps 6 and 7: Write the selector/rule properties to  place the next five elements in the next
  five rows in the grid. */
 
